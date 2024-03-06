@@ -217,6 +217,14 @@ if (crewMass <= 500) {
 */
 
 for (let i = 0; i < starWarsCharacters.length; i++) {
+  if (starWarsCharacters[i].gender === "n/a") {
+    starWarsCharacters[i].gender = "robot";
+  }
+}
+
+/* 
+ULTERIORE METODO CON IL COSTRUTTO SWITCH
+for (let i = 0; i < starWarsCharacters.length; i++) {
   switch (starWarsCharacters[i].gender) {
     case "n/a":
       starWarsCharacters[i].gender = "robot";
@@ -224,7 +232,7 @@ for (let i = 0; i < starWarsCharacters.length; i++) {
     default:
       break;
   }
-}
+} */
 
 console.log(starWarsCharacters);
 
@@ -243,8 +251,10 @@ for (let i = 0; i < femaleCharacters.length; i++) {
   }
 }
 
-// Questa soluzione la possiamo leggere come iterando sul gli elementi di femaleCharacters ed iterando sugli elementi di characters
-// se gli elementi di characters sono uguali agli elementi di femaleCharacters.name allora con il metodo splice
+// Questa soluzione la possiamo leggere come: iterando sul gli elementi di femaleCharacters ed iterando
+// sugli elementi di characters
+// se gli elementi di characters, essendo solo stringhe, sono uguali agli elementi di femaleCharacters.name
+// allora con il metodo splice
 // elimina gli elementi dall'array characters
 
 console.log(characters);
@@ -258,7 +268,7 @@ const personaggioCasuale =
   starWarsCharacters[Math.floor(Math.random() * starWarsCharacters.length)];
 
 // Math.floor è un metodo statico che permette di arrontondare al numero intero più vicino a quello
-// di riferimento, quindi in questo caso, la moltiplicazione tra un numero pseudo-casuale tra 0 ed 1,
+// di riferimento, quindi in questo caso, la moltiplicazione tra un numero pseudo-casuale tra 0, incluso, ed 1, esluso,
 // (Math.random()), e la lunghezza dell'array di riferimento
 
 console.log(
@@ -266,5 +276,7 @@ console.log(
 );
 
 // \n permette di andare a capo, per il resto si tratta di interpolazione delle stringhe.
+// ovvero l'inserimento negli apici rovesciti del testo da inserire seguito dal simbolo del $
+// e tra parentesi la variabile che si vuole inserire
 
 // In questo ultimo punto ho usato l'interpolazione delle stringhe per abbreviare la riga.

@@ -22,7 +22,7 @@ const starWarsCharacters = [
   {
     name: "R2-D2",
     height: 96,
-    mass: 3,
+    mass: 32,
     hair_color: "n/a",
     skin_color: "white, blue",
     eye_color: "red",
@@ -32,7 +32,7 @@ const starWarsCharacters = [
   {
     name: "Darth Vader",
     height: 202,
-    mass: 6,
+    mass: 136,
     hair_color: "none",
     skin_color: "white",
     eye_color: "yellow",
@@ -52,7 +52,7 @@ const starWarsCharacters = [
   {
     name: "Owen Lars",
     height: 178,
-    mass: 10,
+    mass: 120,
     hair_color: "brown, grey",
     skin_color: "light",
     eye_color: "blue",
